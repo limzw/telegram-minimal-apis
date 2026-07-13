@@ -24,6 +24,7 @@ namespace TelegramMinimalAPIs.Common.Behaviours
             var validationResults = await Task.WhenAll(
                 _validators.Select(v => v.ValidateAsync(context, cancellationToken)));
 
+
             var failures = validationResults
                 .SelectMany(result => result.Errors)
                 .Where(f => f != null)

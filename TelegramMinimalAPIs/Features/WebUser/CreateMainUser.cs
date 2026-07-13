@@ -11,9 +11,9 @@ namespace TelegramMinimalAPIs.Features.WebUser
 {
     public class CreateMainUser
     {
-        public record CreateMainUserRequest(Dictionary<string, string> authDict, string idempotencyKey) : IRequest<CreateMainUserResponse>, IIdempotentRequest
+        public record CreateMainUserRequest(Dictionary<string, string> authDict) : IRequest<CreateMainUserResponse>, IIdempotentRequest
         {
-            public string IdempotencyKey => idempotencyKey;
+            public string IdempotencyKey => authDict["idempotencyKey"];
         }
 
         public class Endpoint : IEndpoint
@@ -26,9 +26,7 @@ namespace TelegramMinimalAPIs.Features.WebUser
                     var body = await reader.ReadToEndAsync();
                     Dictionary<string, string> userCreds = JsonSerializer.Deserialize<Dictionary<string, string>>(body);
 
-                    var idempotencyKey = context.Request.Headers["Idempotency-Key"].ToString();
-
-                    var response = await mediator.Send(new CreateMainUserRequest(userCreds, idempotencyKey));
+                    var response = await mediator.Send(new CreateMainUserRequest(userCreds));
                     if (response.accessCookie == null || response.refreshCookie == null)
                     {
                         if (!string.IsNullOrEmpty(response.message))
@@ -107,8 +105,13 @@ namespace TelegramMinimalAPIs.Features.WebUser
         {
             public CreateMainUserRequestValidation()
             {
-                RuleFor(request => request.authDict).NotEmpty().Must(dict => dict.ContainsKey("username") && dict.ContainsKey("password"));
-                RuleFor(request => request.idempotencyKey).NotEmpty().NotNull();
+                RuleFor(request => request.authDict).NotEmpty()
+                .Must(dict => dict.ContainsKey("username") && dict.ContainsKey("password") && dict.ContainsKey("idempotencyKey"))
+                .DependentRules(() =>
+                {
+                    RuleFor(request => request.IdempotencyKey).NotEmpty();
+                });
+
             }
         }
     }
