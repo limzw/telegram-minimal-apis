@@ -18,6 +18,7 @@ This project exposes REST APIs to allow client applications to send Telegram mes
 - Options pattern for application configurations
 - MediatR pattern with REPR
 - EntityFrameworkCore with PostgreSQL
+- Logging with Serilog
 
 ## Getting Started
 
