@@ -1,8 +1,8 @@
-﻿using FlutterBackendCSharp.Common;
-using FlutterBackendCSharp.Common.Database;
+﻿using TelegramMinimalAPIs.Common;
+using TelegramMinimalAPIs.Common.Database;
 using MediatR;
 
-namespace FlutterBackendCSharp.Features.Status
+namespace TelegramMinimalAPIs.Features.Status
 {
     public class GetApiServerUptime
     {

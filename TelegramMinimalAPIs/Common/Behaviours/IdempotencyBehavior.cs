@@ -1,11 +1,11 @@
-﻿using FlutterBackendCSharp.Common.Database;
-using FlutterBackendCSharp.Common.Database.Entities;
-using FlutterBackendCSharp.Common.ExceptionHandlers;
+﻿using TelegramMinimalAPIs.Common.Database;
+using TelegramMinimalAPIs.Common.Database.Entities;
+using TelegramMinimalAPIs.Common.ExceptionHandlers;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
-namespace FlutterBackendCSharp.Common.Behaviours
+namespace TelegramMinimalAPIs.Common.Behaviours
 {
     public class IdempotencyBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     {

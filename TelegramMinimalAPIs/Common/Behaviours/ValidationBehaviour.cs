@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using MediatR;
 
-namespace FlutterBackendCSharp.Common.Behaviours
+namespace TelegramMinimalAPIs.Common.Behaviours
 {
     public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
     {

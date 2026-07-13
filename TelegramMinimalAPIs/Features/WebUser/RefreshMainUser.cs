@@ -1,11 +1,11 @@
-﻿using FlutterBackendCSharp.Common;
-using FlutterBackendCSharp.Common.Database;
-using FlutterBackendCSharp.Common.Database.Entities;
-using FlutterBackendCSharp.Common.Services.Cookies;
+﻿using TelegramMinimalAPIs.Common;
+using TelegramMinimalAPIs.Common.Database;
+using TelegramMinimalAPIs.Common.Database.Entities;
+using TelegramMinimalAPIs.Common.Services.Cookies;
 using MediatR;
 using System.Security.Claims;
 
-namespace FlutterBackendCSharp.Features.WebUser
+namespace TelegramMinimalAPIs.Features.WebUser
 {
     public class RefreshMainUser
     {

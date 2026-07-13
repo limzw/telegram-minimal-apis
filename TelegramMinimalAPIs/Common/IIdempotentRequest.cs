@@ -1,4 +1,4 @@
-﻿namespace FlutterBackendCSharp.Common
+﻿namespace TelegramMinimalAPIs.Common
 {
     public interface IIdempotentRequest
     {

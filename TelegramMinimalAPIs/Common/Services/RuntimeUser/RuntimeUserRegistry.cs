@@ -1,11 +1,11 @@
-﻿using FlutterBackendCSharp.Common.Configuration;
-using FlutterBackendCSharp.Common.Database;
-using FlutterBackendCSharp.Common.Database.Entities;
-using FlutterBackendCSharp.Common.Services.Loggers;
+﻿using TelegramMinimalAPIs.Common.Configuration;
+using TelegramMinimalAPIs.Common.Database;
+using TelegramMinimalAPIs.Common.Database.Entities;
+using TelegramMinimalAPIs.Common.Services.Loggers;
 using Microsoft.Extensions.Options;
 using System.Collections.Concurrent;
 
-namespace FlutterBackendCSharp.Common.Services.RuntimeUser
+namespace TelegramMinimalAPIs.Common.Services.RuntimeUser
 {
     public class RuntimeUserRegistry : IDisposable
     {

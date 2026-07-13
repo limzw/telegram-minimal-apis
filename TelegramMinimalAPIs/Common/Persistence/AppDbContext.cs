@@ -1,8 +1,8 @@
-﻿using FlutterBackendCSharp.Common.Database.Entities;
-using FlutterBackendCSharp.Common.Persistence.Entities;
+﻿using TelegramMinimalAPIs.Common.Database.Entities;
+using TelegramMinimalAPIs.Common.Persistence.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace FlutterBackendCSharp.Common.Database
+namespace TelegramMinimalAPIs.Common.Database
 {
     public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
     {

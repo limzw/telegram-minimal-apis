@@ -1,8 +1,8 @@
-﻿using FlutterBackendCSharp.Common;
+﻿using TelegramMinimalAPIs.Common;
 using MediatR;
 using System.Security.Claims;
 
-namespace FlutterBackendCSharp.Features.WebUser
+namespace TelegramMinimalAPIs.Features.WebUser
 {
     public class GetMainUser
     {

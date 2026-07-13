@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace FlutterBackendCSharp.Common.Services.Cookies
+namespace TelegramMinimalAPIs.Common.Services.Cookies
 {
     public interface ICookieGenerator
     {

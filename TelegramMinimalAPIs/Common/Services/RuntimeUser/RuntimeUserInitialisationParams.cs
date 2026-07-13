@@ -1,4 +1,4 @@
-﻿namespace FlutterBackendCSharp.Common.Services.RuntimeUser
+﻿namespace TelegramMinimalAPIs.Common.Services.RuntimeUser
 {
     public class RuntimeUserInitialisationParams
     {

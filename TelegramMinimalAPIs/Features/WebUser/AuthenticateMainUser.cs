@@ -1,14 +1,14 @@
 ﻿using FluentValidation;
-using FlutterBackendCSharp.Common;
-using FlutterBackendCSharp.Common.Database;
-using FlutterBackendCSharp.Common.Database.Entities;
-using FlutterBackendCSharp.Common.Services.Cookies;
-using FlutterBackendCSharp.Common.Services.Loggers;
 using MediatR;
 using System.Security.Claims;
 using System.Text.Json;
+using TelegramMinimalAPIs.Common;
+using TelegramMinimalAPIs.Common.Database;
+using TelegramMinimalAPIs.Common.Database.Entities;
+using TelegramMinimalAPIs.Common.Services.Cookies;
+using TelegramMinimalAPIs.Common.Services.Loggers;
 
-namespace FlutterBackendCSharp.Features.WebUser
+namespace TelegramMinimalAPIs.Features.WebUser
 {
     public class AuthenticateMainUser
     {

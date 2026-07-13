@@ -1,4 +1,4 @@
-﻿namespace FlutterBackendCSharp.Common.Persistence.Entities
+﻿namespace TelegramMinimalAPIs.Common.Persistence.Entities
 {
     public class ServiceUserActivity
     {

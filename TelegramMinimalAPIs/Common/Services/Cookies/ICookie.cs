@@ -1,4 +1,4 @@
-﻿namespace FlutterBackendCSharp.Common.Services.Cookies
+﻿namespace TelegramMinimalAPIs.Common.Services.Cookies
 {
     public interface ICookie
     {

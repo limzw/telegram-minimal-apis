@@ -1,11 +1,11 @@
-﻿using FlutterBackendCSharp.Common;
-using FlutterBackendCSharp.Common.Database;
-using FlutterBackendCSharp.Common.Services.RuntimeUser;
+﻿using TelegramMinimalAPIs.Common;
+using TelegramMinimalAPIs.Common.Database;
+using TelegramMinimalAPIs.Common.Services.RuntimeUser;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
-namespace FlutterBackendCSharp.Features.ServiceUser
+namespace TelegramMinimalAPIs.Features.ServiceUser
 {
     public class GetOnlineServiceUsers
     {

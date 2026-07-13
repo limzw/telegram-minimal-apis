@@ -1,4 +1,4 @@
-﻿namespace FlutterBackendCSharp.Common.Database.Entities
+﻿namespace TelegramMinimalAPIs.Common.Database.Entities
 {
     public class ApiLog
     {

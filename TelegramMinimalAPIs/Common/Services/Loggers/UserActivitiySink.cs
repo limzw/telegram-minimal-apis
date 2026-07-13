@@ -1,7 +1,7 @@
 ﻿using Serilog.Core;
 using Serilog.Events;
 
-namespace FlutterBackendCSharp.Common.Services.Loggers
+namespace TelegramMinimalAPIs.Common.Services.Loggers
 {
     public class UserActivitiySink : ILogEventSink
     {

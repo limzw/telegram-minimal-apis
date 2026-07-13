@@ -1,7 +1,7 @@
 ﻿using FluentValidation.Results;
 using Microsoft.AspNetCore.Diagnostics;
 
-namespace FlutterBackendCSharp.Common.ExceptionHandlers
+namespace TelegramMinimalAPIs.Common.ExceptionHandlers
 {
     public class ValidationExceptionHandler : IExceptionHandler
     {

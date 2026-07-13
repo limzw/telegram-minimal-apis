@@ -1,8 +1,8 @@
-﻿using FlutterBackendCSharp.Common.Database;
-using FlutterBackendCSharp.Common.Database.Entities;
+﻿using TelegramMinimalAPIs.Common.Database;
+using TelegramMinimalAPIs.Common.Database.Entities;
 using System.Diagnostics;
 
-namespace FlutterBackendCSharp.Common.Services
+namespace TelegramMinimalAPIs.Common.Services
 {
     public class UptimeTrackingService : BackgroundService
     {

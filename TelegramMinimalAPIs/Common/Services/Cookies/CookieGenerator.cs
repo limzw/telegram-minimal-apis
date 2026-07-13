@@ -1,4 +1,4 @@
-﻿using FlutterBackendCSharp.Common.Configuration;
+﻿using TelegramMinimalAPIs.Common.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -6,7 +6,7 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace FlutterBackendCSharp.Common.Services.Cookies
+namespace TelegramMinimalAPIs.Common.Services.Cookies
 {
     public class CookieGenerator : ICookieGenerator
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Diagnostics;
 
-namespace FlutterBackendCSharp.Common.ExceptionHandlers
+namespace TelegramMinimalAPIs.Common.ExceptionHandlers
 {
     public class IdempotencyExceptionHandler : IExceptionHandler
     {

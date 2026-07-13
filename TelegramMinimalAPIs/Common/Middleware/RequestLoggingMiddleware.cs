@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Net;
 
-namespace FlutterBackendCSharp.Common.Middleware
+namespace TelegramMinimalAPIs.Common.Middleware
 {
     public class RequestLoggingMiddleware
     {

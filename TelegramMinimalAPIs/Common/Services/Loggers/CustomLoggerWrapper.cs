@@ -1,6 +1,6 @@
 ﻿using Serilog.Context;
 
-namespace FlutterBackendCSharp.Common.Services.Loggers
+namespace TelegramMinimalAPIs.Common.Services.Loggers
 {
     public enum Database
     {

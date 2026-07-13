@@ -1,7 +1,7 @@
-﻿using FlutterBackendCSharp.Common;
+﻿using TelegramMinimalAPIs.Common;
 using MediatR;
 
-namespace FlutterBackendCSharp.Features.Status
+namespace TelegramMinimalAPIs.Features.Status
 {
     public class GetApiServerStatus
     {

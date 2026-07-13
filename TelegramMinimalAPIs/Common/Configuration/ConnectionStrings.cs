@@ -1,4 +1,4 @@
-﻿namespace FlutterBackendCSharp.Common.Configuration
+﻿namespace TelegramMinimalAPIs.Common.Configuration
 {
     public class ConnectionStrings
     {

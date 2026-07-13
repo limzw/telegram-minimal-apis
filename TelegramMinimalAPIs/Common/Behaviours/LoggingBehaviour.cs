@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System.Diagnostics;
 
-namespace FlutterBackendCSharp.Common.Behaviours
+namespace TelegramMinimalAPIs.Common.Behaviours
 {
     public class LoggingBehaviour<TRequest, TReponse> : IPipelineBehavior<TRequest, TReponse>
     {

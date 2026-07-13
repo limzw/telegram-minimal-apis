@@ -1,11 +1,11 @@
-﻿using FlutterBackendCSharp.Common.Services.Loggers;
+﻿using TelegramMinimalAPIs.Common.Services.Loggers;
 using TdLib;
 using TdLib.Bindings;
-using static FlutterBackendCSharp.Features.ServiceUser.CreateMessage;
+using static TelegramMinimalAPIs.Features.ServiceUser.CreateMessage;
 using static TdLib.TdApi;
 using static TdLib.TdApi.InputMessageContent;
 
-namespace FlutterBackendCSharp.Common.Services.RuntimeUser
+namespace TelegramMinimalAPIs.Common.Services.RuntimeUser
 {
     public class RuntimeUser : IDisposable
     {

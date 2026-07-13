@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace FlutterBackendCSharp.Common.Utilities
+namespace TelegramMinimalAPIs.Common.Utilities
 {
     public static class HttpHelper
     {

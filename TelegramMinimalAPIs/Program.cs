@@ -1,13 +1,4 @@
 using FluentValidation;
-using FlutterBackendCSharp.Common;
-using FlutterBackendCSharp.Common.Behaviours;
-using FlutterBackendCSharp.Common.Configuration;
-using FlutterBackendCSharp.Common.Database;
-using FlutterBackendCSharp.Common.ExceptionHandlers;
-using FlutterBackendCSharp.Common.Middleware;
-using FlutterBackendCSharp.Common.Services.Cookies;
-using FlutterBackendCSharp.Common.Services.Loggers;
-using FlutterBackendCSharp.Common.Services.RuntimeUser;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -21,8 +12,17 @@ using Serilog.Sinks.PostgreSQL.ColumnWriters;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
+using TelegramMinimalAPIs.Common;
+using TelegramMinimalAPIs.Common.Behaviours;
+using TelegramMinimalAPIs.Common.Configuration;
+using TelegramMinimalAPIs.Common.Database;
+using TelegramMinimalAPIs.Common.ExceptionHandlers;
+using TelegramMinimalAPIs.Common.Middleware;
+using TelegramMinimalAPIs.Common.Services.Cookies;
+using TelegramMinimalAPIs.Common.Services.Loggers;
+using TelegramMinimalAPIs.Common.Services.RuntimeUser;
 
-namespace FlutterBackendCSharp
+namespace TelegramMinimalAPIs
 {
     public class Program
     {
