@@ -31,7 +31,7 @@ namespace TelegramMinimalAPIs.Common.Middleware
                 int statusCode = context.Response.StatusCode;
 
                 //log down responses that do not return 200 
-                if (statusCode != (int)HttpStatusCode.OK)
+                if (statusCode < 200 && statusCode >= 300)
                 {
                     var method = context.Request.Method;
                     var path = context.Request.Path.ToString();
