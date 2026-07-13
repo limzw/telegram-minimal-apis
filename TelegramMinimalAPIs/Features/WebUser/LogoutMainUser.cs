@@ -1,7 +1,7 @@
-﻿using TelegramMinimalAPIs.Common;
+﻿using MediatR;
+using TelegramMinimalAPIs.Common;
 using TelegramMinimalAPIs.Common.Database;
 using TelegramMinimalAPIs.Common.Database.Entities;
-using MediatR;
 
 namespace TelegramMinimalAPIs.Features.WebUser
 {

@@ -1,6 +1,6 @@
-﻿using TelegramMinimalAPIs.Common.Database.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using TelegramMinimalAPIs.Common.Database.Entities;
 using TelegramMinimalAPIs.Common.Persistence.Entities;
-using Microsoft.EntityFrameworkCore;
 
 namespace TelegramMinimalAPIs.Common.Database
 {

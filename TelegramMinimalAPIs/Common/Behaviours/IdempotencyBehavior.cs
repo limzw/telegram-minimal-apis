@@ -1,9 +1,9 @@
-﻿using TelegramMinimalAPIs.Common.Database;
-using TelegramMinimalAPIs.Common.Database.Entities;
-using TelegramMinimalAPIs.Common.ExceptionHandlers;
-using MediatR;
+﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
+using TelegramMinimalAPIs.Common.Database;
+using TelegramMinimalAPIs.Common.Database.Entities;
+using TelegramMinimalAPIs.Common.ExceptionHandlers;
 
 namespace TelegramMinimalAPIs.Common.Behaviours
 {

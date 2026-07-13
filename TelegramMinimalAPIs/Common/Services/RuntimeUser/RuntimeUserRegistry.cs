@@ -1,9 +1,9 @@
-﻿using TelegramMinimalAPIs.Common.Configuration;
+﻿using Microsoft.Extensions.Options;
+using System.Collections.Concurrent;
+using TelegramMinimalAPIs.Common.Configuration;
 using TelegramMinimalAPIs.Common.Database;
 using TelegramMinimalAPIs.Common.Database.Entities;
 using TelegramMinimalAPIs.Common.Services.Loggers;
-using Microsoft.Extensions.Options;
-using System.Collections.Concurrent;
 
 namespace TelegramMinimalAPIs.Common.Services.RuntimeUser
 {

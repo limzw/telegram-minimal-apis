@@ -1,9 +1,9 @@
-﻿using TelegramMinimalAPIs.Common;
-using TelegramMinimalAPIs.Common.Database;
-using TelegramMinimalAPIs.Common.Services.RuntimeUser;
-using MediatR;
+﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
+using TelegramMinimalAPIs.Common;
+using TelegramMinimalAPIs.Common.Database;
+using TelegramMinimalAPIs.Common.Services.RuntimeUser;
 
 namespace TelegramMinimalAPIs.Features.ServiceUser
 {

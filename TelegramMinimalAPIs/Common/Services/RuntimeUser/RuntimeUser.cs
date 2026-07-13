@@ -1,9 +1,9 @@
-﻿using TelegramMinimalAPIs.Common.Services.Loggers;
-using TdLib;
+﻿using TdLib;
 using TdLib.Bindings;
-using static TelegramMinimalAPIs.Features.ServiceUser.CreateMessage;
+using TelegramMinimalAPIs.Common.Services.Loggers;
 using static TdLib.TdApi;
 using static TdLib.TdApi.InputMessageContent;
+using static TelegramMinimalAPIs.Features.ServiceUser.CreateMessage;
 
 namespace TelegramMinimalAPIs.Common.Services.RuntimeUser
 {

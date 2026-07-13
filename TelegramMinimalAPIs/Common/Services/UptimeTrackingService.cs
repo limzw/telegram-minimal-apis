@@ -1,6 +1,6 @@
-﻿using TelegramMinimalAPIs.Common.Database;
+﻿using System.Diagnostics;
+using TelegramMinimalAPIs.Common.Database;
 using TelegramMinimalAPIs.Common.Database.Entities;
-using System.Diagnostics;
 
 namespace TelegramMinimalAPIs.Common.Services
 {

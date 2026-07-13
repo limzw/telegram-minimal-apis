@@ -1,6 +1,6 @@
-﻿using TelegramMinimalAPIs.Common;
-using MediatR;
+﻿using MediatR;
 using System.Security.Claims;
+using TelegramMinimalAPIs.Common;
 
 namespace TelegramMinimalAPIs.Features.WebUser
 {

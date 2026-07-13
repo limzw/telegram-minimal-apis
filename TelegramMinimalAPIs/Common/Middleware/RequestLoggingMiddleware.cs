@@ -1,6 +1,5 @@
 ﻿using Serilog.Context;
 using System.Diagnostics;
-using System.Net;
 
 namespace TelegramMinimalAPIs.Common.Middleware
 {

@@ -1,6 +1,6 @@
-﻿using TelegramMinimalAPIs.Common;
+﻿using MediatR;
+using TelegramMinimalAPIs.Common;
 using TelegramMinimalAPIs.Common.Database;
-using MediatR;
 
 namespace TelegramMinimalAPIs.Features.Status
 {

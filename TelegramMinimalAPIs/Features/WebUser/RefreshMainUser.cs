@@ -1,9 +1,9 @@
-﻿using TelegramMinimalAPIs.Common;
+﻿using MediatR;
+using System.Security.Claims;
+using TelegramMinimalAPIs.Common;
 using TelegramMinimalAPIs.Common.Database;
 using TelegramMinimalAPIs.Common.Database.Entities;
 using TelegramMinimalAPIs.Common.Services.Cookies;
-using MediatR;
-using System.Security.Claims;
 
 namespace TelegramMinimalAPIs.Features.WebUser
 {

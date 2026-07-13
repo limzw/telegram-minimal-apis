@@ -1,19 +1,19 @@
 ﻿using FluentValidation;
+using MediatR;
+using System.Security.Claims;
+using System.Text.Json;
 using TelegramMinimalAPIs.Common;
 using TelegramMinimalAPIs.Common.Database;
 using TelegramMinimalAPIs.Common.Database.Entities;
 using TelegramMinimalAPIs.Common.Services.Cookies;
-using MediatR;
-using System.Security.Claims;
-using System.Text.Json;
 
 namespace TelegramMinimalAPIs.Features.WebUser
 {
     public class CreateMainUser
     {
-        public record CreateMainUserRequest(Dictionary<string, string> authDict) : IRequest<CreateMainUserResponse>, IIdempotentRequest
+        public record CreateMainUserRequest(Dictionary<string, string> authDict, string idempotencyKey) : IRequest<CreateMainUserResponse>, IIdempotentRequest
         {
-            public string IdempotencyKey => authDict["idempotencyKey"];
+            public string IdempotencyKey => idempotencyKey;
         }
 
         public class Endpoint : IEndpoint
@@ -26,7 +26,10 @@ namespace TelegramMinimalAPIs.Features.WebUser
                     var body = await reader.ReadToEndAsync();
                     Dictionary<string, string> userCreds = JsonSerializer.Deserialize<Dictionary<string, string>>(body);
 
-                    var response = await mediator.Send(new CreateMainUserRequest(userCreds));
+                    if (!context.Request.Headers.TryGetValue("Idempotency-Key", out var key) || string.IsNullOrWhiteSpace(key) || key == "null")
+                        return Results.BadRequest("Idempotency-Key header is required.");
+
+                    var response = await mediator.Send(new CreateMainUserRequest(userCreds, key));
                     if (response.accessCookie == null || response.refreshCookie == null)
                     {
                         if (!string.IsNullOrEmpty(response.message))
@@ -105,13 +108,7 @@ namespace TelegramMinimalAPIs.Features.WebUser
         {
             public CreateMainUserRequestValidation()
             {
-                RuleFor(request => request.authDict).NotEmpty()
-                .Must(dict => dict.ContainsKey("username") && dict.ContainsKey("password") && dict.ContainsKey("idempotencyKey"))
-                .DependentRules(() =>
-                {
-                    RuleFor(request => request.IdempotencyKey).NotEmpty();
-                });
-
+                RuleFor(request => request.authDict).NotEmpty().Must(dict => dict.ContainsKey("username") && dict.ContainsKey("password"));
             }
         }
     }

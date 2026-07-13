@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
+using MediatR;
+using System.Text.Json;
 using TelegramMinimalAPIs.Common;
 using TelegramMinimalAPIs.Common.Database;
 using TelegramMinimalAPIs.Common.Services.RuntimeUser;
 using TelegramMinimalAPIs.Common.Utilities;
-using MediatR;
-using System.Text.Json;
 
 namespace TelegramMinimalAPIs.Features.ServiceUser
 {
