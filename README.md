@@ -45,7 +45,7 @@ This project exposes REST APIs to allow client applications to send Telegram mes
    dotnet user-secrets set "RefreshTokenSettings:RefreshCookieExpiryOffsetValue" <!-- refresh-cookie-expiry-offset-value -->
    dotnet user-secrets set "RefreshTokenSettings:RefreshCookieExpiryOffsetValueType" <!-- refresh-cookie-expiry-offset-value-type -->
     
-   dotnet user-secrets set "ConnectionStrings:DatabaseConnectionString" <!-- your-connection-string-here" -->
+   dotnet user-secrets set "ConnectionStrings:DatabaseConnectionString" <!-- your-connection-string-here -->
     
    dotnet user-secrets set "TelegramSettings:ApiId" <!-- your-telegram-api-id -->
    dotnet user-secrets set "TelegramSettings:ApiHash" <!-- your-telegram-api-hash -->
