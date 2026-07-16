@@ -78,8 +78,7 @@ namespace TelegramMinimalAPIs.Features.WebUser
                 newWebUser.Name = request.authDict["username"];
                 newWebUser.Role = "User";
 
-                _appDbContext.WebUsers.Add(newWebUser);
-                await _appDbContext.SaveChangesAsync();
+                await _appDbContext.WebUsers.AddAsync(newWebUser);
 
                 Claim[] claims =
                 [

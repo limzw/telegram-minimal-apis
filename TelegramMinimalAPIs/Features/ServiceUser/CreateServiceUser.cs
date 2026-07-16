@@ -73,7 +73,7 @@ namespace TelegramMinimalAPIs.Features.ServiceUser
                             newServiceUser.UserPhoneNumber = phoneNumber;
 
                             await _appDbContext.AddAsync(newServiceUser);
-                            int saveCount = await _appDbContext.SaveChangesAsync();
+                            await _appDbContext.SaveChangesAsync();
 
                             _logger.LogInformation("Saved app user");
                             return new CreateServiceUserResponse(Results.Ok(new { Guid = guidStr }));
