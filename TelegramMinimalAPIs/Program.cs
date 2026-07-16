@@ -180,6 +180,12 @@ namespace TelegramMinimalAPIs
             var customLoggerWrapper = app.Services.GetRequiredService<CustomLoggerWrapper>();
             customLoggerWrapper.Log(Database.OVERVIEWLOGS, LogLevel.Information, "Starting application");
 
+            var lifetime = app.Services.GetRequiredService<IHostApplicationLifetime>();
+            lifetime.ApplicationStopping.Register(() =>
+            {
+                customLoggerWrapper.Log(Database.OVERVIEWLOGS, LogLevel.Information, "Closing application");
+            });
+
             if (app.Environment.IsDevelopment())
             {
                 IdentityModelEventSource.ShowPII = true;
@@ -190,8 +196,6 @@ namespace TelegramMinimalAPIs
             {
                 await app.RunAsync();
             }
-
-            customLoggerWrapper.Log(Database.OVERVIEWLOGS, LogLevel.Information, "Closing application");
         }
     }
 
