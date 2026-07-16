@@ -32,11 +32,7 @@ namespace TelegramMinimalAPIs.Features.WebUser
                     var response = await mediator.Send(new CreateMainUserRequest(userCreds, key));
                     if (response.accessCookie == null || response.refreshCookie == null)
                     {
-                        if (!string.IsNullOrEmpty(response.message))
-                        {
-                            return Results.BadRequest(new { error = response.message });
-                        }
-                        return Results.BadRequest();
+                        return Results.BadRequest(new { error = response.message });
                     }
 
                     context.Response.Cookies.Append("myToken", response.accessCookie.TokenString, response.accessCookie.Options);
@@ -97,9 +93,7 @@ namespace TelegramMinimalAPIs.Features.WebUser
                 await _appDbContext.RefreshTokens.AddAsync(refToken);
                 await _appDbContext.SaveChangesAsync();
 
-                CreateMainUserResponse createMainUserResponse = new CreateMainUserResponse(accessCookie, refreshCookie);
-
-                return createMainUserResponse;
+                return new CreateMainUserResponse(accessCookie, refreshCookie);
             }
         }
 
