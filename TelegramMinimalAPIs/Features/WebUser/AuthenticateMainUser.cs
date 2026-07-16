@@ -31,6 +31,10 @@ namespace TelegramMinimalAPIs.Features.WebUser
                     }
 
                     var response = await mediator.Send(new AuthenticateMainUserRequest(userCreds, existingRefreshToken));
+                    if (response.accessCookie == null || response.refreshCookie == null)
+                    {
+                        return Results.BadRequest(new { error = response.message });
+                    }
 
                     context.Response.Cookies.Append("myToken", response.accessCookie.TokenString, response.accessCookie.Options);
                     context.Response.Cookies.Append("myRefreshToken", response.refreshCookie.TokenString, response.refreshCookie.Options);
@@ -59,7 +63,7 @@ namespace TelegramMinimalAPIs.Features.WebUser
                 var adminAccount = _appDbContext.WebUsers.FirstOrDefault(admin => admin.Username == request.authDict["username"]);
                 if (adminAccount == null)
                 {
-                    return new AuthenticateMainUserResponse(null, null);
+                    return new AuthenticateMainUserResponse(null, null, "invalid_username");
                 }
                 else
                 {
@@ -72,6 +76,12 @@ namespace TelegramMinimalAPIs.Features.WebUser
                     else if (!BCrypt.Net.BCrypt.Verify(request.authDict["password"], adminAccount.Password))
                     {
                         adminAccount.LoginTryCount += 1;
+
+                        if (adminAccount.LoginTryCount >= 5)
+                        {
+                            //TODO: what happens if login attempts exceed 5 tries
+                        }
+
                         await _appDbContext.SaveChangesAsync();
 
                         return new AuthenticateMainUserResponse(null, null, "invalid_password");
