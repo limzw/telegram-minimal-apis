@@ -30,13 +30,13 @@ namespace TelegramMinimalAPIs.Common.Middleware
                 int statusCode = context.Response.StatusCode;
 
                 //log down responses that do not return 200 
-                if (statusCode < 200 && statusCode >= 300)
+                if (statusCode < 200 || statusCode >= 300)
                 {
                     var method = context.Request.Method;
                     var path = context.Request.Path.ToString();
                     var duration = stopwatch.ElapsedMilliseconds;
 
-                    using (LogContext.PushProperty("database", "ApiLogs"))
+                    using (LogContext.PushProperty("database", Services.Loggers.Database.APILOGS.ToString()))
                     using (LogContext.PushProperty("method", method))
                     using (LogContext.PushProperty("path", path))
                     using (LogContext.PushProperty("status_code", statusCode))
